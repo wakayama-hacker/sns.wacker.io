@@ -2,4 +2,21 @@
   tasks:
     - name: Install Nginx
       become: yes
-      apt: pkg=nginx state=latest
+      apt: name={{ item }} state=latest
+      with_items:
+        - nginx
+        - imagemagick
+        - ffmpeg
+        - libpq-dev
+        - libxml2-dev
+        - libxslt1-dev
+        - nodejs
+        - file
+        - git
+        - curl
+        - redis-server
+        - redis-tools
+        - postgresql
+        - postgresql-contrib
+        - pidentd
+        - rbenv
