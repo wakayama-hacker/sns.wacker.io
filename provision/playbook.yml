@@ -1,6 +1,6 @@
 - hosts: all
   tasks:
-    - name: Install Nginx
+    - name: Install dependencies
       become: yes
       apt: name={{ item }} state=latest
       with_items:
